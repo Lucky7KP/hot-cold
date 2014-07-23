@@ -47,6 +47,7 @@ function compare (userAnswer){
     $('#feedback').text("Congratulations! You got it in " + $('#guessList > li').length + " guesses!");
       $('h2').css('background-color', '#e10a0a');
         document.getElementById('userGuess').disabled = true;
+        $('#guessButton').hide();
   } else if (Math.abs(randomAnswer - userAnswer) > 50) {
       $('#feedback').text("You're freezing, try again.");
   } else if (Math.abs(randomAnswer - userAnswer) > 30) {
