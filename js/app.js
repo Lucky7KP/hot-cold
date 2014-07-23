@@ -4,14 +4,12 @@ $(document).ready(function(){
 /*click - submit guess*/
   $('form').on('click', '#guessButton', function(event) {
       event.preventDefault();
-    var submitAnswer = $('#userGuess').val();
-    var latestGuess = Number($('#guessList > li').last().text());
-    input(submitAnswer);
-    if (latestGuess == 0) {
-
-    } else if ((Math.abs(submitAnswer - randomAnswer)) > (Math.abs(latestGuess - randomAnswer))) {
-      $('#feedback').append();
-    }
+      var submitAnswer = $('#userGuess').val();
+      var latestGuess = Number($('#guessList > li').last().text());
+      input(submitAnswer);
+        if (latestGuess == 0) {
+        } else if ((Math.abs(submitAnswer - randomAnswer)) > (Math.abs(latestGuess - randomAnswer))) {
+      }
   });
 
   /*--- Display information modal box ---*/
