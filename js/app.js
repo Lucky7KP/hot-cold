@@ -28,7 +28,7 @@ $(document).ready(function(){
 });
 
 /*Game selects random number*/
-  var randomAnswer = Math.abs((Math.random() * 99) + 1);
+  var randomAnswer = Math.floor((Math.random() * 99) + 1);
 
 /*add user's guesses to bottom of game*/
 function addNumber(){
