@@ -1,7 +1,7 @@
 
 $(document).ready(function(){
 
-    /*--- Display information modal box ---*/
+  /*--- Display information modal box ---*/
   $(".what").click(function(){
       $(".overlay").fadeIn(1000);
   });
@@ -15,7 +15,7 @@ $(document).ready(function(){
     window.location.reload(true);
   });
 
-/*click - submit guess*/
+ /*click - submit guess*/
   $('form').on('click', '#guessButton', function(event) {
       event.preventDefault();
       var submitAnswer = $('#userGuess').val();
@@ -28,7 +28,7 @@ $(document).ready(function(){
 });
 
 /*Game selects random number*/
-  var randomAnswer = Math.floor((Math.random() * 99) + 1);
+var randomAnswer = Math.floor((Math.random() * 99) + 1);
 
 /*add user's guesses to bottom of game*/
 function addNumber(){
