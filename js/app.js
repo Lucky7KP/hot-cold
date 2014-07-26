@@ -1,6 +1,20 @@
 
 $(document).ready(function(){
 
+    /*--- Display information modal box ---*/
+  $(".what").click(function(){
+      $(".overlay").fadeIn(1000);
+  });
+
+  /*--- Hide information modal box ---*/
+  $("a.close").click(function(){
+    $(".overlay").fadeOut(1000);
+  });
+
+  $(".new").click(function(){
+    window.location.reload(true);
+  });
+
 /*click - submit guess*/
   $('form').on('click', '#guessButton', function(event) {
       event.preventDefault();
@@ -11,24 +25,10 @@ $(document).ready(function(){
         } else if ((Math.abs(submitAnswer - randomAnswer)) > (Math.abs(latestGuess - randomAnswer))) {
       }
   });
-
-  /*--- Display information modal box ---*/
-    $(".what").click(function(){
-      $(".overlay").fadeIn(1000);
-    });
-
-    /*--- Hide information modal box ---*/
-    $("a.close").click(function(){
-      $(".overlay").fadeOut(1000);
-    });
-
-    $(".new").click(function(){
-      window.location.reload(true);
-    });
 });
 
 /*Game selects random number*/
-  var randomAnswer = Math.floor((Math.random() * 99) + 1);
+  var randomAnswer = Math.abs((Math.random() * 99) + 1);
 
 /*add user's guesses to bottom of game*/
 function addNumber(){
