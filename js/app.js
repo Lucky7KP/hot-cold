@@ -20,17 +20,14 @@ $(document).ready(function(){
       event.preventDefault();
       var submitAnswer = $('#userGuess').val();
       var latestGuess = Number($('#guessList > li').last().text());
-      input(submitAnswer);
-        if (latestGuess == 0) {
-        } else if ((Math.abs(submitAnswer - randomAnswer)) > (Math.abs(latestGuess - randomAnswer))) {
-      }
+      input(submitAnswer);  
   });
 });
 
 /*Game selects random number*/
 var randomAnswer = Math.floor((Math.random() * 99) + 1);
 
-/*add user's guesses to bottom of game*/
+/*add user's guesses to bottom of game and empty field*/
 function addNumber(){
   $('#guessList').append('<li>'+$('#userGuess').last().val()+'</li>');
   $('#userGuess').val(" ");
